@@ -8,15 +8,20 @@
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/angular.min.js"></script>
 </head>
 
 <body>
   <h1>Hi</h1>
+  <div ng-controller="myController">
+    <h3>{{name | uppercase}}, there is a message for you.</h3>
+    <h2 ng-if="show">{{sayMessage}}</h2>
+    <button ng-click="showMessage()">Show message</button>
+  </div>
 
   <script src="js/jquery.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
-  <script src="js/angular.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
