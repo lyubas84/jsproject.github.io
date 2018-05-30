@@ -14,9 +14,8 @@
 <body>
   <h1>Hi</h1>
   <div ng-controller="myController">
-    <h3>{{name | uppercase}}, there is a message for you.</h3>
-    <h2 ng-if="show">{{sayMessage}}</h2>
-    <button ng-click="showMessage()">Show message</button>
+    <input type="text" ng-model="search">
+    <h3 ng-repeat="number in array | filter: search">{{number}}</h3>
   </div>
 
   <script src="js/jquery.min.js"></script>
